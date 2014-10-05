@@ -1,0 +1,24 @@
+html, body {
+    margin:0;
+    padding:0;
+}
+
+.pics {
+    list-style-type: none;
+    padding:0;
+    margin:0;
+}
+
+.pics li {
+    display: inline-block;
+    width: 75px;
+    height: 75px;
+    vertical-align: top;
+    text-align:center;
+}
+
+.pics img {
+    max-width:100px;
+    max-height:100px;
+    vertical-align:middle;
+}
