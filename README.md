@@ -1,4 +1,4 @@
 random-twitpic
 ==============
 
-Randomly get images fro Twitpic
+Randomly get images from Twitpic
