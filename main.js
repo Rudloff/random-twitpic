@@ -20,10 +20,10 @@ function getImg() {
         if (this.readyState === 4) {
             if (this.status === 200) {
                 dummy = parser.parseFromString(this.responseText, 'text/html');
-                media = dummy.getElementById('media-full');
+                media = dummy.getElementById('media');
                 if (media) {
                     pic.appendChild(link);
-                    link.setAttribute('href', 'https://twitpic.com/' + media.getElementsByClassName('blue-button')[0].getAttribute('href'));
+                    link.setAttribute('href', 'https://twitpic.com/' + num);
                     link.setAttribute('target', '_blank');
                     img.setAttribute('src', 'https://twitpic.com/show/mini/' + num);
                     link.appendChild(img);
@@ -36,7 +36,7 @@ function getImg() {
             }
         }
     };
-    req.open('GET', 'http://www.corsproxy.com/twitpic.com/' + num + '/full', true);
+    req.open('GET', 'https://cors-anywhere.herokuapp.com/twitpic.com/' + num, true);
     req.send(null);
 }
 
