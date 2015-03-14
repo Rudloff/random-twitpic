@@ -1,12 +1,21 @@
 /*global DOMParser*/
 /*jslint browser: true*/
+/**
+ * Get a random integer
+ *
+ * @param {int} min Minimum
+ * @param {int} max Maximum
+ *
+ * @return {int}
+ * */
 function getRandomInt(min, max) {
     'use strict';
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-
-
+/**
+ * Get a random image from Twitpic and add it to the page
+ * */
 function getImg() {
     'use strict';
     var req = new XMLHttpRequest(), num = getRandomInt(0, 100000);
@@ -40,6 +49,9 @@ function getImg() {
     req.send(null);
 }
 
+/**
+ * Main function
+ * */
 function init() {
     'use strict';
     var i;
